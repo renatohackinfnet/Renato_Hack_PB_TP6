@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Renato_Hack_PB_TP6</string>
+    <string name="entre_com_os_dados">Entre com os dados (em R$)</string>
+    <string name="outros_descontos">Outros descontos:</string>
+    <string name="pensao_alimenticia">Pensão alimentícia:</string>
+    <string name="no_dependentes">Número de Dependentes (número inteiro):</string>
+    <string name="salario_bruto">Salário Bruto:</string>
+    <string name="plano_de_saude">Plano de Saúde:</string>
+    <string name="calcular_salario_liquido">Calcular Salário Líquido</string>
+</resources>

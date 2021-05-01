@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".telaPrincipal.MainActivity">
+
+    <TextView
+        android:id="@+id/headerPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/entre_com_os_dados"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descontosPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/outros_descontos"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextplanoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextplanoPrincipal" />
+
+    <TextView
+        android:id="@+id/pensaoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/pensao_alimenticia"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextnoDependentesPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextnoDependentesPrincipal" />
+
+    <TextView
+        android:id="@+id/noDependentesPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/no_dependentes"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextsalarioBrutoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextsalarioBrutoPrincipal" />
+
+    <TextView
+        android:id="@+id/salarioBrutoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/salario_bruto"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/headerPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/headerPrincipal" />
+
+    <TextView
+        android:id="@+id/planoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/plano_de_saude"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editTextpensaoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/editTextpensaoPrincipal" />
+
+    <EditText
+        android:id="@+id/editTextsalarioBrutoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/salarioBrutoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/salarioBrutoPrincipal" />
+
+    <EditText
+        android:id="@+id/editTextnoDependentesPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/noDependentesPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/noDependentesPrincipal"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextpensaoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/pensaoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/pensaoPrincipal" />
+
+    <EditText
+        android:id="@+id/editTextplanoPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/planoPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/planoPrincipal" />
+
+    <EditText
+        android:id="@+id/editTextdescontosPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/descontosPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/descontosPrincipal" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular_salario_liquido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextdescontosPrincipal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextdescontosPrincipal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
