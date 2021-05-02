@@ -16,7 +16,7 @@ class PrincipalViewModel : ViewModel() {
         val planoF = toFloat(plano)
         val descontosF = toFloat(descontos)
 
-        val liquido = brutoF - INSS(brutoF) - IRPF(brutoF) - pensaoF - planoF - dependentesF*189.59f
+        val liquido = brutoF - INSS(brutoF) - IRPF(brutoF) - pensaoF - planoF - descontosF - dependentesF*189.59f
 
         return liquido.toString()
     }

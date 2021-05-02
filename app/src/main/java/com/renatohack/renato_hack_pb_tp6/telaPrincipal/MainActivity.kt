@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.renatohack.renato_hack_pb_tp6.R
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val view : Button = findViewById(R.id.buttonCalcular)
+
         viewModel = ViewModelProvider(this).get(PrincipalViewModel::class.java)
 
         buttonCalcular.setOnClickListener {
@@ -26,7 +29,10 @@ class MainActivity : AppCompatActivity() {
                 textView.text = calcularLiquido()
             }
             else {
-                Snackbar.make(it, "Você precisa preencher o campo \"Salário Bruto\".").show()
+                Snackbar.make(this,
+                        view,
+                        "Você precisa preencher o campo \"Salário Bruto\".",
+                        Snackbar.LENGTH_LONG).show()
             }
         }
     }
