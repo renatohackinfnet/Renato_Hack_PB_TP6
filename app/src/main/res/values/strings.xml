@@ -7,4 +7,8 @@
     <string name="salario_bruto">Salário Bruto:</string>
     <string name="plano_de_saude">Plano de Saúde:</string>
     <string name="calcular_salario_liquido">Calcular Salário Líquido</string>
+    <string name="salario_liquido">Salário Líquido:</string>
+    <string name="porcentagem_de_descontos">Porcentagem de descontos:</string>
+    <string name="total_de_descontos">Total de descontos:</string>
+    <string name="rs">R$</string>
 </resources>

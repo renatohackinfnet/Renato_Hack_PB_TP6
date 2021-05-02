@@ -1,5 +1,6 @@
 package com.renatohack.renato_hack_pb_tp6.telaPrincipal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.renatohack.renato_hack_pb_tp6.R
+import com.renatohack.renato_hack_pb_tp6.telaSecundaria.TelaResultados
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -26,7 +28,8 @@ class MainActivity : AppCompatActivity() {
         buttonCalcular.setOnClickListener {
 
             if (editTextsalarioBrutoPrincipal.text.toString() != "") {
-                textView.text = calcularLiquido()
+                calcularLiquido()
+                irParaTelaResultados()
             }
             else {
                 Snackbar.make(this,
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun calcularLiquido() : String{
+    private fun calcularLiquido() {
 
         val bruto = editTextsalarioBrutoPrincipal.text.toString()
         val dependentes = editTextnoDependentesPrincipal.text.toString()
@@ -46,9 +49,12 @@ class MainActivity : AppCompatActivity() {
         val plano = editTextplanoPrincipal.text.toString()
         val descontos = editTextdescontosPrincipal.text.toString()
 
-        val liquido = viewModel.calcularSalarioLiquido(bruto, dependentes, pensao, plano, descontos)
+        viewModel.calcularSalarioLiquido(bruto, dependentes, pensao, plano, descontos)
+    }
 
-        return liquido
+    fun irParaTelaResultados(){
+        val intent = Intent(this, TelaResultados::class.java)
+        startActivity(intent)
     }
 
 }

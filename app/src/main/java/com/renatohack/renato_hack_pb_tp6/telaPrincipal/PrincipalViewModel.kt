@@ -1,6 +1,7 @@
 package com.renatohack.renato_hack_pb_tp6.telaPrincipal
 
 import androidx.lifecycle.ViewModel
+import com.renatohack.renato_hack_pb_tp6.database.mockDatabase
 
 class PrincipalViewModel : ViewModel() {
 
@@ -8,7 +9,7 @@ class PrincipalViewModel : ViewModel() {
                                        dependentes: String?,
                                        pensao: String?,
                                        plano: String?,
-                                       descontos: String?) : String {
+                                       descontos: String?) {
 
         val brutoF = toFloat(bruto)
         val dependentesF = toFloat(dependentes)
@@ -16,9 +17,11 @@ class PrincipalViewModel : ViewModel() {
         val planoF = toFloat(plano)
         val descontosF = toFloat(descontos)
 
-        val liquido = brutoF - INSS(brutoF) - IRPF(brutoF) - pensaoF - planoF - descontosF - dependentesF*189.59f
+        val liquidoF = brutoF - INSS(brutoF) - IRPF(brutoF) - pensaoF - planoF - descontosF - dependentesF*189.59f
+        val totalDescontosF = brutoF - liquidoF
+        val porcentagemF = (totalDescontosF*100f)/brutoF
 
-        return liquido.toString()
+        mockDatabase.mudarDados(liquidoF.toString(), totalDescontosF.toString(), String.format("%.2f", porcentagemF))
     }
 
     private fun toFloat(myString: String?) : Float{

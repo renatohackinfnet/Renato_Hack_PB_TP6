@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Renato_Hack_PB_TP6">
+        <activity android:name=".telaSecundaria.TelaResultados"></activity>
         <activity android:name=".telaPrincipal.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
